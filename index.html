@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revitalizing Compassion a Case Study </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <style>
     .logo img {
       width: 100px;
     }
@@ -48,6 +49,8 @@ button:not(:disabled) {
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition);
 }
+
+
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
     color: transparent;
@@ -56,8 +59,21 @@ button:not(:disabled) {
   width: 48px;
 }
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
-  margin-left: 28%;
+    margin-left: 28%;
+    column-gap: 11%;
 }
+.nav-item {
+  color: white;
+  font-size: 0.9rem;
+  /* ... other existing styles ... */
+  transition: transform 0.3s ease; /* Add a transition for smooth animation */
+}
+.nav-item {
+  background-color: #f23580;
+  box-shadow: 0px 0px 5.4375px 0px #fff, 0px 0px 10.875px 0px #fff, 0px 0px 38.0625px 16px #fff;
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
 body {
       background-color: black;
     }
@@ -130,8 +146,8 @@ max-width: 100%;
         <img src="./images/menu.png" alt="Toggle Navigation">
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navigation-links">
+                <li class="nav-item">
             <a class="nav-link active" style="color: white; font-size: .9rem;" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
@@ -147,6 +163,7 @@ max-width: 100%;
             <a class="nav-link active" style="color: white; font-size: .9rem;" aria-current="page" href="#">Contact</a>
           </li>
         </ul>
+      
       </div>
     </div>
   </nav>
